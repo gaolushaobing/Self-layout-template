@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  </head>
+  <style>
+    .accordion {
+      background-color: #eee;
+      color:#444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+    }
+
+    .active,
+    .accordion:hover {
+      background-color: #ccc;
+    }
+
+    .panel {
+      padding: 0 18px;
+      background-color: #fff;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+    }
+
+    .accordion:after {
+      content: '\002B';
+      color: #777;
+      font-weight: bold;
+      float: right;
+      margin-left: 5px; 
+    }
+
+    .active:after {
+      content: "\2212";
+    }
+  </style>
+
+  <body>
+    <h2>手风琴效果</h2>
+    <p>在这个示例中, 右侧添加了'+'符号, 点击后, 会自动替换为'-'符号. </p>
+
+    <button class="accordion">念奴娇</button>
+    <div class="panel">
+      <p>宋·苏轼 大江东去，浪淘尽。千古风流人物。故垒西边，人道是，三国周郎赤壁。乱石穿空，惊涛拍岸，卷起千堆雪。江山如画，一时多少豪杰!遥想公瑾当年，小乔初嫁了，雄姿英发，羽扇纶巾，谈笑间，樯橹灰飞烟灭。故国神游，多情应笑我，早生华发。人间如梦，一樽还酹江月。</p>
+    </div>
+
+    <button class="accordion">雨霖铃</button>
+    <div class="panel">
+      <p>
+        宋·柳永 寒蝉凄切，对长亭晚。骤雨初歇，都门帐饮无绪，方留恋处，兰舟催发。执手相看泪眼，竟无语凝噎。念去去，千里烟波，暮霭沉沉楚天阔。多情自古伤离别，更那堪，冷落清秋节。今宵酒醒何处?杨柳岸，晓风残月。此去经年，应是良辰好景虚设。便纵有千种风情，待与何人说!
+      </p>
+    </div>
+
+    <button class="accordion">一剪梅</button>
+    <div class="panel">
+      <p>
+        宋·李清照 红藕香残玉簟秋。轻解罗裳，独上兰舟。云中谁寄锦书来?雁字回时，月满西楼。花自飘零水自流，一种相思，两处闲愁。此情无计可消除，才下眉头，却上心头。
+      </p>
+    </div>
+
+
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      }
+    </script>
+  </body>
+
+</html>
