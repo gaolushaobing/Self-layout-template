@@ -1,0 +1,3 @@
+# declaration
+
+This project is a case for individuals to store various page layout effects.
