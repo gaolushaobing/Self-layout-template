@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  </head>
+  <style>
+    /* 设置选项卡样式 */
+
+    .tab {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+    }
+
+    /* 设置按钮样式 */
+
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 17px;
+    }
+
+    /* 鼠标放上按钮时的颜色 */
+
+    .tab button:hover {
+      background-color: #ddd;
+    }
+
+    /* 点击按钮时的颜色 */
+
+    .tab button.active {
+      background-color: #ccc;
+    }
+
+    /* 设置内容的样式 */
+
+    .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+      animation: fadeEffect 0.9s;
+      /* 衰减1秒淡入淡出 */
+    }
+
+    @keyframes fadeEffect {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .toprightClose {
+      float: right;
+      cursor: pointer;
+      font-size: 26px;
+    }
+
+  </style>
+
+  <body>
+    <h2>选项卡</h2>
+    <p>点击菜单中的选项卡按钮, 切换显示</p>
+
+    <div class="tab">
+      <button class="tablinks" onclick="openCity(event, 'zhengzhou')" id="defaultOpen">郑州</button>
+      <button class="tablinks" onclick="openCity(event, 'hefei')">合肥</button>
+      <button class="tablinks" onclick="openCity(event, 'xian')">西安</button>
+    </div>
+
+    <div id="zhengzhou" class="tabcontent">
+      <span class="toprightClose" onclick="this.parentElement.style.display='none'">&times;</span>
+      <h3>郑州</h3>
+      <p>郑州市是中国河南省的省会，中国八大古都之一，国家历史文化名城，中国国家中心城市和国家重要的综合交通枢纽。郑州位于河南省中部偏北，黄河下游。现辖6个市辖区、5个县级市、1个县，全市总面积7,567.18平方公里，其中市区面积1,078.07平方公里，2012年市区建成区面积373平方公里。2015年，全市常住人口956.9万，其中市区常住人口470.08万。居民以汉族为主，母语为中原官话的郑州方言。</p>
+    </div>
+
+    <div id="hefei" class="tabcontent">
+      <span class="toprightClose" onclick="this.parentElement.style.display='none'">&times;</span>
+      <h3>合肥</h3>
+      <p>合肥市，简称合或肥，有时亦简称庐，别称庐州，中华人民共和国安徽省省会和最大城市，行政区划级别为地级市。安徽省的政治、经济、文化、信息、交通、金融和商贸中心，中国综合性国家科学中心。长三角城市群副中心，皖江城市带和合肥都市圈核心城市。合肥地处长江、淮河之间，环抱巢湖，位于安徽省正中央，分别与东边的滁州市、马鞍山市，南边的芜湖市、铜陵市、安庆市，西边的六安市，北边的淮南市相邻。现辖4区4县1县级市，全市总面积11445.1平方公里（含巢湖水面770平方公里），2017年市区建成区面积460平方公里。截至2017年底，全市常住人口796.50万人，常住人口城镇化率73.75%。</p>
+    </div>
+
+    <div id="xian" class="tabcontent">
+      <span class="toprightClose" onclick="this.parentElement.style.display='none'">&times;</span>
+      <h3>西安</h3>
+      <p>西安市，古称长安、京兆、镐京，位于中华人民共和国中部，紧邻中华人民共和国几何中心，现为国家中心城市、陕西省省会，是陕西省的政治、经济、文化、交通、医疗、教育中心。西安拥有3000余年的文明史、建城史和1077年的建都史，历史上曾有包括周、秦、汉、隋、唐等在内的共13个中原朝代在此建都，也是汉唐时期丝绸之路的起点。西安是中国历史上强盛的统一王朝建都最多的古都，在西安定都的周、秦、汉、唐，代表了中国帝王时期开放、外向、尚武、繁荣的顶峰。从文明曙光的半坡到西周礼乐；从大秦一统到汉唐盛世；西安曾经在两千年的时间跨度中作为中国首都和政治、经济、文化中心，被誉为“天然历史博物馆”，是联合国教科文组织确立的世界历史名城之一，以及国际著名的旅游目的地城市，西安目前有两项六处世界文化遗产，数量居于全国前列。2011年，国务院发布《全国主体功能规划》，西安规划为中国唯一的“历史文化基地”。</p>
+    </div>
+
+
+    <script>
+      function openCity(evt, cityName) {
+        // 声明所有变量
+        var i, tabcontent, tablinks;
+
+        // 获取所有内容元素并隐藏他们
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+
+        // 获取所有按钮, 并移除激活样式
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        // 显示内容并给按钮添加激活样式
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+
+      // 打开默认选项
+      document.getElementById("defaultOpen").click();
+
+      function close() {
+        ;
+      }
+
+    </script>
+  </body>
+
+</html>
