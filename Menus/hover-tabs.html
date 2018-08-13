@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Style the tab */
+
+      .tab {
+        float: left;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+        width: 30%;
+        height: 300px;
+      }
+
+      /* Style the buttons that are used to open the tab content */
+
+      .tab button {
+        display: block;
+        background-color: inherit;
+        color: black;
+        border: none;
+        outline: none;
+        padding: 22px 16px;
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 17px;
+      }
+
+      /* Change background color of buttons on hover */
+
+      .tab button:hover {
+        background-color: #ccc;
+      }
+
+      /* Create an active/current "tab button" class */
+
+      .tab button.active {
+        background-color: #ddd;
+      }
+
+      /* Style the tab content */
+
+      .tabcontent {
+        float: left;
+        padding: 0 12px;
+        border: 1px solid #ccc;
+        width: 70%;
+        border-left: none;
+        height: 300px;
+        display: none;
+      }
+
+      /* Clear floats after the tab */
+
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <h2>Hover tabs</h2>
+    <p>Move the mouse over a button inside the tabed menu:</p>
+
+    <div class="tab">
+      <button class="tablinks" onmousemove="openCity(event, 'London')">伦敦</button>
+      <button class="tablinks" onmousemove="openCity(event, 'Paris')">巴黎</button>
+      <button class="tablinks" onmousemove="openCity(event, 'Tokyo')">东京</button>
+    </div>
+
+    <div id="London" class="tabcontent">
+      <h3>伦敦</h3>
+      <p>伦敦是英国的首都城市</p>
+    </div>
+
+    <div id="Paris" class="tabcontent">
+      <h3>巴黎</h3>
+      <p>巴黎是法国的首都城市</p>
+    </div>
+
+    <div id="Tokyo" class="tabcontent">
+      <h3>东京</h3>
+      <p>东京是日本的首都城市</p>
+    </div>
+    <script>
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName('tabcontent');
+
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = 'none';
+        };
+
+        tablinks = document.getElementsByClassName('tablinks');
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(' active', '');
+        }
+
+        document.getElementById(cityName).style.display = 'block';
+        evt.currentTarget.className += 'active';
+
+      }
+
+    </script>
+  </body>
+
+</html>

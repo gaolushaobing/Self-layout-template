@@ -6,7 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/full-page-tabs.css">
+    <style>
+      * {
+        box-sizing: border-box
+      }
+
+      body,
+      html {
+        margin: 0;
+        height: 100%;
+      }
+
+      .tablink {
+        background-color: #555;
+        color: #fff;
+        float: left;
+        font-size: 17px;
+        width: 25%;
+        border: none;
+        outline: none;
+        padding: 14px 16px;
+        cursor: pointer;
+      }
+
+      .tablink:hover {
+        background-color: #777;
+      }
+
+      .tabcontent {
+        color: #fff;
+        padding: 100px 20px;
+        height: 100%;
+        display: none;
+      }
+
+      #home {
+        background-color: orangered;
+      }
+
+      #news {
+        background-color: green;
+      }
+
+      #contact {
+        background-color: blue;
+      }
+
+      #about {
+        background-color: orange;
+      }
+
+    </style>
   </head>
 
   <body>
@@ -35,7 +85,28 @@
       <p>我们是谁, 我们做什么</p>
     </div>
 
-    <script src="../js/full-page-tabs.js"></script>
+    <script>
+      function openPage(pageName, elmnt, color) {
+        var i, tabcontent, tablinks;
+
+        tabcontent = document.getElementsByClassName('tabcontent');
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = 'none';
+        }
+
+        tablinks = document.getElementsByClassName('tablink');
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].style.backgroundColor = '';
+        }
+
+        document.getElementById(pageName).style.display = 'block';
+
+        elmnt.style.backgroundColor = color;
+      }
+
+      document.getElementById('defaultOpen').click();
+
+    </script>
   </body>
 
 </html>
