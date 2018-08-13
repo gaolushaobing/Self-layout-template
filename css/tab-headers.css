@@ -1,0 +1,44 @@
+/* 设置按钮样式 */
+
+.tablink {
+  background-color: #555;
+  color: #fff;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+/* 改变鼠标悬停到按钮上的背景颜色 */
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* 设置内容默认样式 */
+
+.tabcontent {
+  color: #fff;
+  display: none;
+  padding: 50px;
+  text-align: center;
+}
+
+#zhengzhou {
+  background-color: orangered;
+}
+
+#jinan {
+  background-color: green;
+}
+
+#xian {
+  background-color: blue;
+}
+
+#haerbin {
+  background-color: orange;
+}
