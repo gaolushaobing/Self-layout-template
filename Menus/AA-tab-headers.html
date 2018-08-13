@@ -5,8 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="../css/tab-headers.css">
 </head>
 <body>
-  
+  <div id="zhengzhou" class="tabcontent">
+    <h3>郑州市</h3>
+    <p>郑州是河南省会城市</p>
+  </div>
+
+  <div id="jinan" class="tabcontent">
+    <h3>济南市</h3>
+    <p>济南是山东省会城市</p>
+  </div>
+
+  <div id="xian" class="tabcontent">
+    <h3>西安市</h3>
+    <p>西安是陕西省会城市</p>
+  </div>
+
+  <div id="haerbin" class="tabcontent">
+    <h3>哈尔滨市</h3>
+    <p>哈尔滨是黑龙江省会城市</p>
+  </div>
+
+  <button class="tablinks" id="defaultOpen" onclick="openCity('zhengzhou', this, 'red')">郑州</button>
+  <button class="tablinks" onclick="openCity('jinan', this, 'green')">济南</button>
+  <button class="tablinks" onclick="openCity('xian', this, 'blue')">西安</button>
+  <button class="tablinks" onclick="openCity('haerbin', this, 'orange')">哈尔滨</button>
+
+
+  <script src="../js/tab-headers.js"></script>
 </body>
 </html>
