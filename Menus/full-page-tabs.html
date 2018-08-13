@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/full-page-tabs.css">
+  </head>
+
+  <body>
+    <button class="tablink" onclick="openPage('home', this, 'orangered')">家</button>
+    <button class="tablink" onclick="openPage('news', this, 'green')">新闻中心</button>
+    <button class="tablink" onclick="openPage('contact', this, 'blue')">联系我们</button>
+    <button class="tablink" onclick="openPage('about', this, 'orange')">关于我们</button>
+
+    <div id="home" class="tabcontent">
+      <h3>家</h3>
+      <p>家是心之所在..</p>
+    </div>
+
+    <div id="news" class="tabcontent">
+      <h3>新闻</h3>
+      <p>这个好日子有一些好新闻!</p>
+    </div>
+
+    <div id="contact" class="tabcontent">
+      <h3>联系</h3>
+      <p>保持联系, 或者来一杯咖啡</p>
+    </div>
+
+    <div id="about" class="tabcontent">
+      <h3>关于</h3>
+      <p>我们是谁, 我们做什么</p>
+    </div>
+
+    <script src="../js/full-page-tabs.js"></script>
+  </body>
+
+</html>
