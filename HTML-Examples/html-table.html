@@ -9,13 +9,27 @@
         border: 1px solid #000;
       }
 
-    </style>
-    <style>
       #border-collapse table,
       #border-collapse th,
       #border-collapse td {
         border: 1px solid #000;
-        border-collapse: collapse; 
+        border-collapse: collapse;
+      }
+
+      #border-cellpadding table,
+      #border-cellpadding th,
+      #border-cellpadding td {
+        border: 1px solid #000;
+        border-collapse: collapse;
+      }
+
+      #border-cellpadding th,
+      #border-cellpadding td {
+        padding: 15px;
+      }
+
+      th {
+        text-align: left;
       }
 
     </style>
@@ -110,6 +124,38 @@
     <p>如果你想让边框之间塌陷，只留下一个边框，可以在CSS中使用border-collapse属性</p>
 
     <div id="border-collapse">
+      <table style="width: 50%;">
+      <caption>在table标签里面第一行的caption标签是标题</caption>
+
+        <tr>
+          <th>姓名</th>
+          <th>职业</th>
+          <th>战斗力</th>
+        </tr>
+        <tr>
+          <td>张三</td>
+          <td>道士</td>
+          <td>85</td>
+        </tr>
+        <tr>
+          <td>李六</td>
+          <td>法师</td>
+          <td>90</td>
+        </tr>
+        <tr>
+          <td>王九</td>
+          <td>战士</td>
+          <td>95</td>
+        </tr>
+      </table>
+    </div>
+
+    <br>
+    <hr>
+
+    <h2>边框填充</h2>
+    <p>可以用padding属性为内容与边框之间填充空白空间</p>
+    <div id="border-cellpadding">
       <table style="width: 50%;">
         <tr>
           <th>姓名</th>
