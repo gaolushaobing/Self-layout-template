@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 <html>
+
+  <head>
+    <style>
+      #border-em table,
+      #border-em th,
+      #border-em td {
+        border: 1px solid #000;
+      }
+
+    </style>
+  </head>
+
   <body>
-    
+
     <h2>HTML表格</h2>
 
     <p>HTML表格以table标签开头</p>
@@ -54,6 +66,33 @@
 
     <hr>
 
-    
+    <h2>表格边框</h2>
+    <p>是用CSS的border属性给表格添加边框。</p>
+
+    <div id="border-em">
+      <table style="width: 50%;">
+        <tr>
+          <th>姓名</th>
+          <th>职业</th>
+          <th>战斗力</th>
+        </tr>
+        <tr>
+          <td>张三</td>
+          <td>道士</td>
+          <td>85</td>
+        </tr>
+        <tr>
+          <td>李六</td>
+          <td>法师</td>
+          <td>90</td>
+        </tr>
+        <tr>
+          <td>王九</td>
+          <td>战士</td>
+          <td>95</td>
+        </tr>
+      </table>
+    </div>
   </body>
+
 </html>
