@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
+
   <body>
-    
+
     <h2>文本输入</h2>
 
     <form>
-      姓：<br>
-      <input type="text" name="firstname">
+      姓：
       <br>
-      名：<br>
+      <input type="text" name="firstname">
+      <br> 名：
+      <br>
       <input type="text" name="lastname">
     </form>
 
@@ -17,5 +19,30 @@
     <p>默认宽度是20个字符</p>
 
     <hr>
+
+    <h2>单选按钮</h2>
+
+    <form>
+      <fieldset>
+        <legend>吃的：</legend>
+        <input type="radio" name="eat" value="bread" checked>面包
+        <br>
+        <input type="radio" name="eat" value="meat">牛肉
+        <br>
+        <input type="radio" name="eat" value="hamburger">汉堡
+        <br>
+      </fieldset>
+      <fieldset>
+        <legend>喝的：</legend>
+        <input type="radio" name="drink" value="coffee" checked>咖啡
+        <br>
+        <input type="radio" name="drink" value="beer">啤酒
+        <br>
+        <input type="radio" name="drink" value="milk">牛奶
+        <br>
+        <input type="radio" name="drink" value="water">水
+      </fieldset>
+    </form>
   </body>
+
 </html>
