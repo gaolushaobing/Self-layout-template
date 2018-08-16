@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+  <head>
+    <title>CSS 浮动布局</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Style the header */
+      header {
+        background-color: #666;
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+        color: #fff;
+      }
+
+      /* Create two columns/boxes that floats next to each other */
+
+      nav {
+        float: left;
+        width: 30%;
+        background: #ccc;
+        padding: 20px;
+        height: 400px;
+      }
+
+      /* Style the list inside the menu */
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      article {
+        float: left;
+        padding: 20px;
+        width: 70%;
+        background-color: #f1f1f1;
+        height: 400px;
+
+      }
+
+      section:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      
+      footer {
+        background-color: #777;
+        padding: 10px;
+        text-align: center;
+        color: #fff;
+      }
+
+      @media (max-width: 600px) {
+        nav, article {
+          width: 100%;
+          height: auto;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <h2>CSS 浮动布局</h2>
+
+    <header>
+      <h2>城市</h2>
+    </header>
+
+    <section>
+      <nav>
+        <ul>
+          <li>
+            <a href="###">郑州</a>
+          </li>
+          <li>
+            <a href="###">厦门</a>
+          </li>
+          <li>
+            <a href="###">西安</a>
+          </li>
+        </ul>
+      </nav>
+
+      <article>
+        <h1>郑州</h1>
+        <p>
+          郑州市总面积7446平方公里，截至2015年末，下辖6个市辖区、1个县，代管5个县级市，常住人口956.9万人。2015年郑州生产总值为7315.2亿元。郑州市地处中原腹地，属温带季风气候，四季分明，位于中国地貌第二阶梯与第三阶梯的交接过渡地带，地势西南高、东北低。
+        </p>
+        <p>
+          郑州是国家历史文化名城，是华夏文明重要发祥地之一，为中华人文始祖轩辕黄帝的故里，历史上曾五次为都、八代为州，是“中国八大古都”之一和世界历史都市联盟成员。全市有世界文化遗产2项15处，全国重点文物保护单位38处43项，拥有黄帝故里、商城遗址、天地之中等众多历史人文景观。
+        </p>
+      </article>
+    </section>
+
+    <footer>
+      <p>底部</p>
+    </footer>
+  </body>
+
+</html>
