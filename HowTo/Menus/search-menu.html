@@ -43,7 +43,15 @@
       }
 
       #myMenu li a {
-        background-color: #f6f6f6;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        color: black;
+        display: block;
+      }
+
+      #myMenu li a:hover {
+        background-color: #eee;
       }
     </style>
   </head>
@@ -88,6 +96,28 @@
         </p>
       </div>
     </div>
+
+
+    <script>
+      function myFunction() {
+        var input, filter, ul, li, a, i;
+        input = document.getElementById("mySearch");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myMenu");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
+          }
+        }
+      }
+    </script>
+    
+    
+    
   </body>
 
 </html>
