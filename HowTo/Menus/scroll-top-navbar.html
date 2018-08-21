@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: #f1f1f1;
+      }
+
+      #navbar {
+        background-color: #333;
+        position: fixed;
+        top: -50px;
+        width: 100%;
+        display: block;
+        transition: top 0.3s;
+      }
+
+      #navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        text-decoration: none;
+        padding: 15px;
+        font-size: 17px;
+      }
+
+      #navbar a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      
+    </style>
+  </head>
+
+  <body>
+
+    <div id="navbar">
+      <a href="#">Home</a>
+      <a href="#">News</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div style="padding: 15px 15px 200px; font-size: 30px">
+      <p>
+        <b>
+          This example demonstrates how to slide down a navbar when the user starts to scroll the page.
+        </b>
+      </p>
+      <p>
+        Scroll to the top to hide the navbar.
+      </p>
+<pre style="font-size: 17px">
+
+        《晓出净慈寺送林子方》
+        【宋】杨万里
+    
+        毕竟西湖六月中，
+        
+        风光不与四时同。
+        
+        接天莲叶无穷碧，
+        
+        映日荷花别样红。
+        
+    
+        登鹳雀楼
+        唐代：王之涣
+    
+        白日依山尽，
+        
+        黄河入海流。
+    
+        欲穷千里目，
+        
+        更上一层楼。
+    
+    
+    
+        黄鹤楼送孟浩然之广陵
+        唐代：李白
+    
+        故人西辞黄鹤楼，
+        
+        烟花三月下扬州。
+    
+        孤帆远影碧空尽，
+        
+        唯见长江天际流。
+    
+    
+        枫桥夜泊
+        唐代：张继
+    
+        月落乌啼霜满天，
+        
+        江枫渔火对愁眠。
+    
+        姑苏城外寒山寺，
+        
+        夜半钟声到客船。
+    
+    
+        黄鹤楼 / 登黄鹤楼
+        唐代：崔颢
+    
+        昔人已乘黄鹤去，
+        
+        此地空余黄鹤楼。
+    
+        黄鹤一去不复返，
+        
+        白云千载空悠悠。
+    
+        晴川历历汉阳树，
+        
+        芳草萋萋鹦鹉洲。
+    
+        日暮乡关何处是？
+        
+        烟波江上使人愁。
+</pre>
+
+    </div>
+
+    <script>
+      window.onscroll = function() {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById('navbar').style.top = '0';
+        } else {
+          document.getElementById('navbar').style.top = '-50px';
+        }
+      }
+    </script>
+  </body>
+
+</html>
